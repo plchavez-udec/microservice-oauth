@@ -54,8 +54,8 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 				.secret(bcryptPasswordEncoder.encode(env.getProperty("config.security.oauth.client.secret")))
 				.scopes("read", "write")// Alcance o permisos que tiene la app
 				.authorizedGrantTypes("password", "refresh_token") // como se va a obtener el token (credenciales)
-				.accessTokenValiditySeconds(300)// Tiempo de valide del token
-				.refreshTokenValiditySeconds(360); // Tiempo de valide del refreshtoken
+				.accessTokenValiditySeconds(1000)// Tiempo de valide del token
+				.refreshTokenValiditySeconds(1060); // Tiempo de valide del refreshtoken
 	}
 
 	// endpoints relacionado al endpoints del servidor de autorización que se
